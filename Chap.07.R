@@ -185,14 +185,14 @@ y
 
 ##### 07-21
 
-z <- merge(x,y, by=c("name"))
+z <- merge(x, y, by=c("name"))
 z
 
 ##### 07-22
 
-merge(x,y, all.x=T)
-merge(x,y, all.y=T)
-merge(x,y, all=T)
+merge(x, y, all.x=T)
+merge(x, y, all.y=T)
+merge(x, y, all=T)
 
 ##### 07-23
 
@@ -201,4 +201,4 @@ y <- data.frame(sname=c("a","b","d"), korean=c(75,60,90))
 x
 y
 
-merge(x,y, by.x=c("name"), by.y=c("sname"))
+merge(x, y, by.x=c("name"), by.y=c("sname"))
