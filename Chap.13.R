@@ -1,5 +1,5 @@
 
-myGoogleMapAPIKey='AIzaSyACRedpfcZAz6F2PmuLC-quZLBeArGZ32E'
+myGoogleMapAPIKey='AIza......Z32E'
 
 ##### 13-1
 
