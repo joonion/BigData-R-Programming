@@ -178,3 +178,10 @@ head(air)
 my.iris <- subset(iris, Species='Setosa')
 write.csv(my.iris, "./datasets/my_iris.csv", row.names = F)
 
+##### 엑셀 파일 읽기
+install.packages("readxl")
+library(readxl)
+
+air2 <- read_excel("./datasets/airquality.xlsx", sheet = 2)
+head(air2)
+
