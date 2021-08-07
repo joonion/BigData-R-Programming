@@ -94,3 +94,23 @@ boxplot.stats(dist)
 ##### 05-11
 
 boxplot(Petal.Length~Species, data=iris, main="title")
+
+##### 한 화면에 그래프 여러 개 출력하기
+
+par(mfrow=c(1,3))
+barplot(table(mtcars$carb),
+        main="Barplot of Carburetors",
+        xlab="#of carburetors",
+        ylab="frequency",
+        col="blue")
+barplot(table(mtcars$cyl),
+        main="Barplot of Cylender",
+        xlab="#of cylender",
+        ylab="frequency",
+        col="red")
+barplot(table(mtcars$gear),
+        main="Barplot of Grar",
+        xlab="#of gears",
+        ylab="frequency",
+        col="green")
+par(mfrow=c(1,1))
