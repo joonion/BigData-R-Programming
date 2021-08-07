@@ -1,189 +1,96 @@
 
-##### 06-1
+##### 05-1
 
-wt <-mtcars$wt
-mpg <- mtcars$mpg
-plot(wt, mpg,
-     main="title",
-     xlab="xlab",
-     ylab="ylab(MPG)",
-     col="red",
-     pch=19)
+favorite <- c('WINTER', 'SUMMER', 'SPRING', 'SUMMER', 'SUMMER',
+              'FALL', 'FALL', 'SUMMER', 'SPRING', 'SPRING')
 
-##### 06-2
+favorite
+table(favorite)
+table(favorite)/length(favorite)
 
-vars <- c("mpg","disp","drat","wt")
-target <- mtcars[,vars]
+##### 05-2
 
-head(target)
+ds <- table(favorite)
+ds
 
-pairs(target,
-      main="Multi Plots")
+barplot(ds, main='favorite season')
 
-##### 06-3
+##### 05-3
 
-iris.2 <- iris[,3:4]
-point <- as.numeric(iris$Species)
-point
-color <- c("red","green","blue")
-plot(iris.2,
+ds <- table(favorite)
+ds
 
-     main="Iris plot",
+pie(ds, main='favorite season')
 
-     pch=c(point),
+##### 05-4
 
-     col=color[point])
+favorite.color <- c(2, 3, 2, 1, 1, 2, 2, 1, 3, 2, 1, 3, 2, 1, 2)
+ds <- table(favorite.color)
+ds
 
-##### 06-4
+barplot(ds, main='favorite color')
 
-beers = c(5,2,9,8,3,7,3,5,3,5)
-bal <- c(0.1,0.03,0.19,0.12,0.04,0.0095,0.07,
-         0.06,0.02,0.05)
+colors <- c('green', 'red', 'blue')
+names(ds) <- colors
+ds
 
-tbl <- data.frame(beers,bal)
-tbl
+barplot(ds, main='favorite color', col=colors)
+pie(ds, main='favorite color', col=colors)
 
-plot(bal~beers,data=tbl)
-res <- lm(bal~beers,data=tbl)
-abline(res)
-cor(beers,bal)
+##### 05-5
 
-##### 06-5
+weight <- c(60, 62, 64, 65, 68, 69)
+weight.heavy <- c(weight, 120)
+weight
+weight.heavy
 
-cor(iris[,1:4])
+mean(weight)
+mean(weight.heavy)
 
-##### 06-6
+median(weight)
+median(weight.heavy)
 
-month = 1:12
-late  = c(5,8,7,9,4,6,12,13,8,6,6,4)
-plot(month,
-     late,
-     main="title",
-     type= "l",
-     lty=1,
-     lwd=1,
-     xlab="Month",
-     ylab="Late cnt"
-)
+mean(weight, trim=0.2)
+mean(weight.heavy,trim=0.2)
 
-##### 06-7
+##### 05-6
 
-month = 1:12
+mydata <- c(60, 62, 64, 65, 68, 69, 120)
 
-late1  = c(5,8,7,9,4,6,12,13,8,6,6,4)
+quantile(mydata)
+quantile(mydata, (0:10)/10)
+summary(mydata)
 
-late2  = c(4,6,5,8,7,8,10,11,6,5,7,3)
+##### 05-7
 
-plot(month,
-     late1,
-     main="Late Students",
+mydata <- c(60, 62, 64, 65, 68, 69, 120)
 
-     type= "b",
-     lty=1,
-     col="red",
-     xlab="Month ",
-     ylab="Late cnt",
-     ylim=c(1, 15)
-)
+var(mydata)
+sd(mydata)
+range(mydata)
+diff(range(mydata))
 
-lines(month,
-      late2,
-      type = "b",
-      col = "blue")
+##### 05-8
 
-##### 06-8
+dist <- cars[,2]
+hist(dist,
+     main="Histogram",
+     xlab ="xlab",
+     ylab="ylab",
+     border="blue",
+     col="green",
+     las=2,
+     breaks=5)
 
+##### 05-9
 
-library(mlbench)
+dist <- cars[,2]
+boxplot(dist, main="title")
 
-data("BostonHousing")
+##### 05-10
 
-myds <- BostonHousing[,c("crim","rm","dis","tax","medv")]
+boxplot.stats(dist)
 
+##### 05-11
 
-
-
-grp <- c()
-
-for (i in 1:nrow(myds)) {
-  if (myds$medv[i] >= 25.0) {
-
-    grp[i] <- "H"
-
-  } else if (myds$medv[i] <= 17.0) {
-
-    grp[i] <- "L"
-
-  } else {
-
-    grp[i] <- "M"
-
-  }
-
-}
-
-grp <- factor(grp)
-grp <- factor(grp, levels=c("H","M","L"))
-
-
-myds <- data.frame(myds, grp)
-
-
-
-str(myds)
-
-head(myds)
-
-table(myds$grp)
-
-
-
-par(mfrow=c(2,3))
-for(i in 1:5) {
-
-  hist(myds[,i], main=colnames(myds)[i], col="yellow")
-
-}
-
-par(mfrow=c(1,1))
-
-
-
-
-
-par(mfrow=c(2,3))
-for(i in 1:5) {
-
-  boxplot(myds[,i], main=colnames(myds)[i])
-
-}
-
-par(mfrow=c(1,1))
-
-
-
-boxplot(myds$crim~myds$grp, main="title")
-
-boxplot(myds$rm~myds$grp, main="title")
-
-boxplot(myds$dis~myds$grp, main="title")
-
-boxplot(myds$tax~myds$grp, main="title")
-
-
-
-
-pairs(myds[,-6])
-
-
-
-
-point <- as.integer(myds$grp)
-color <- c("red","green","blue")
-pairs(myds[,-6], pch=point, col=color[point])
-
-
-
-
-cor(myds[,-6])
-
+boxplot(Petal.Length~Species, data=iris, main="title")
