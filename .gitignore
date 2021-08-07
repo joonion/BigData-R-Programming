@@ -1,5 +1,15 @@
+# Temporary Files
+my_iris.csv
+
+# R Project Files
+.Rproj
+.RDataTmp
+
 # Datasets
-./datasets
+./datasets/*.xlsx
+./datasets/*.csv
+./datasets/*.txt
+./datasets/
 
 # History files
 .Rhistory
