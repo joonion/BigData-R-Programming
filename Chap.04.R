@@ -245,7 +245,6 @@ iris.big
 
 ##### 04-24
 
-
 idx <- which(iris[,1:4]>5.0, arr.ind =TRUE)
 idx
 
