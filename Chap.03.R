@@ -28,6 +28,7 @@ m4
 
 z <- matrix(1:20, nrow=4, ncol=5)
 z
+
 z[2, 3]
 z[1, 4]
 z[2,]
@@ -37,6 +38,7 @@ z[,4]
 
 z <- matrix(1:20, nrow=4, ncol=5)
 z
+
 z[2, 1:3]
 z[1, c(1,2,4)]
 z[1:2,]
@@ -60,6 +62,7 @@ score['John', 'Math']
 score['Tom', c('Math','Science')]
 score['Mark',]
 score[,'English']
+
 rownames(score)
 colnames(score)
 colnames(score)[2]
@@ -133,8 +136,6 @@ b - a
 b / a
 a * b
 
-
-
 a <- a * 3
 b <- b - 5
 
@@ -145,11 +146,9 @@ class(state.x77)
 is.matrix(iris)
 is.data.frame(iris)
 is.matrix(state.x77)
-
 is.data.frame(state.x77)
 
 ##### 03-17
-
 
 st <- data.frame(state.x77)
 head(st)
