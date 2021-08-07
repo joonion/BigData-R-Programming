@@ -2,7 +2,7 @@
 ##### 09-1
 
 library(ggmap)
-myGoogleMapAPIKey='AIzaSyACRedpfcZAz6F2PmuLC-quZLBeArGZ32E'
+myGoogleMapAPIKey='AIza......Z32E'
 register_google(key=myGoogleMapAPIKey)
 
 gc <- geocode(enc2utf8("복현동"))
