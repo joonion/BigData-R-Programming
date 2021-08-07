@@ -2,13 +2,11 @@
 ##### 03-1
 
 z <- matrix(1:20, nrow=4, ncol=5)
-
 z                         
 
 ##### 03-2
 
 z2 <- matrix(1:20, nrow=4, ncol=5, byrow=T)
-
 z2                                
 
 ##### 03-3
@@ -16,6 +14,7 @@ z2
 x <- 1:4                          
 y <- 5:8                          
 z <- matrix(1:20, nrow=4, ncol=5) 
+
 m1 <- cbind(x,y)                  
 m1                                
 m2 <- rbind(x,y)                  
@@ -29,8 +28,8 @@ m4
 
 z <- matrix(1:20, nrow=4, ncol=5)   
 z                                   
-z[2,3]                              
-z[1,4]                              
+z[2, 3]                              
+z[1, 4]                              
 z[2,]                               
 z[,4]                               
 
@@ -38,33 +37,27 @@ z[,4]
 
 z <- matrix(1:20, nrow=4, ncol=5) 
 z                                 
-z[2,1:3]                          
-z[1,c(1,2,4)]                     
+z[2, 1:3]                          
+z[1, c(1,2,4)]                     
 z[1:2,]                           
 z[,c(1,4)]                        
 
 ##### 03-6
 
 score <- matrix(c(90,85,69,78,
-
                   85,96,49,95,
-
                   90,80,70,60),
-
                   nrow=4, ncol=3)
-
 score
 
-rownames(score) <- c('John','Tom','Mark','Jane')
-
-colnames(score) <- c('English','Math','Science')
-
+rownames(score) <- c('John', 'Tom', 'Mark', 'Jane')
+colnames(score) <- c('English', 'Math', 'Science')
 score
 
 ##### 03-7
 
-score['John','Math']              
-score['Tom',c('Math','Science')]  
+score['John', 'Math']              
+score['Tom', c('Math','Science')]  
 score['Mark',]                    
 score[,'English']                 
 rownames(score)                   
@@ -73,8 +66,8 @@ colnames(score)[2]
 
 ##### 03-8
 
-city <- c("Seoul","Tokyo","Washington") 
-rank <- c(1,3,2)                        
+city <- c("Seoul", "Tokyo", "Washington") 
+rank <- c(1, 3, 2)                        
 city.info <- data.frame(city, rank)     
 city.info                               
 
@@ -112,57 +105,38 @@ rowMeans(iris[,-5])
 ##### 03-13
 
 z <- matrix(1:20, nrow=4, ncol=5)
-
 z
-
 t(z)                          
 
 ##### 03-14
 
 IR.1 <- subset(iris, Species=="setosa")
-
 IR.1
 
-IR.2 <- subset(iris, Sepal.Length>5.0 &
-
-                 Sepal.Width>4.0)
-
+IR.2 <- subset(iris, Sepal.Length>5.0 & Sepal.Width>4.0)
 IR.2
-
 IR.2[, c(2,4)]                  
 
 ##### 03-15
 
-a <- matrix(1:20,4,5)
-
-b <- matrix(21:40,4,5)
-
+a <- matrix(1:20, 4, 5)
 a
-
+b <- matrix(21:40, 4, 5)
 b
 
-
-
-2*a 
-b-5
-
+2 * a 
+b - 5
 2*a + 3*b
 
-
-
-a+b
-
-b-a
-
-b/a
-
-a*b
+a + b
+b - a
+b / a
+a * b
 
 
 
-a <- a*3
-
-b <- b-5
+a <- a * 3
+b <- b - 5
 
 ##### 03-16
 
@@ -178,18 +152,11 @@ is.data.frame(state.x77)
 
 
 st <- data.frame(state.x77)
-
 head(st)
-
 class(st)
 
-
-
-
 iris.m <- as.matrix(iris[,1:4])
-
 head(iris.m)
-
 class(iris.m)
 
 ##### 03-18
@@ -202,12 +169,13 @@ iris$Species
 
 ##### 03-19
 
-setwd("D:/source")                            
-air <- read.csv("airquality.csv", header=T)   
+getwd()                            
+setwd(".")
+air <- read.csv("./datasets/airquality.csv", header = T)   
 head(air)
 
 ##### 03-20
 
-setwd("D:/source")                              
 my.iris <- subset(iris, Species='Setosa')       
-write.csv(my.iris, "my_iris.csv", row.names=F)  
+write.csv(my.iris, "my_iris.csv", row.names = F)  
+

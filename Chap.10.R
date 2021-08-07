@@ -37,17 +37,11 @@ barplot(temp,
 ##### 10-3
 
 wordcloud(names(wordcount),
-
           freq=wordcount,       
-
           scale=c(6,0.7),      
-
           min.freq=3,          
-
           random.order=F,       
-
           rot.per=.1,           
-
           colors=pal2)          
 
 
