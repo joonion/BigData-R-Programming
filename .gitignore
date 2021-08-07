@@ -6,10 +6,10 @@ my_iris.csv
 .RDataTmp
 
 # Datasets
-./datasets/*.xlsx
-./datasets/*.csv
-./datasets/*.txt
-./datasets/
+/datasets/*.xlsx
+/datasets/*.csv
+/datasets/*.txt
+/datasets/
 
 # History files
 .Rhistory
