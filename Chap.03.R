@@ -176,5 +176,5 @@ head(air)
 ##### 03-20
 
 my.iris <- subset(iris, Species='Setosa')
-write.csv(my.iris, "my_iris.csv", row.names = F)
+write.csv(my.iris, "./datasets/my_iris.csv", row.names = F)
 

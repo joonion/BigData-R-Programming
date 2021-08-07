@@ -2,7 +2,7 @@
 my_iris.csv
 
 # R Project Files
-.Rproj
+*.Rproj
 .RDataTmp
 
 # Datasets
