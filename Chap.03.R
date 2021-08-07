@@ -2,45 +2,45 @@
 ##### 03-1
 
 z <- matrix(1:20, nrow=4, ncol=5)
-z                         
+z
 
 ##### 03-2
 
 z2 <- matrix(1:20, nrow=4, ncol=5, byrow=T)
-z2                                
+z2
 
 ##### 03-3
 
-x <- 1:4                          
-y <- 5:8                          
-z <- matrix(1:20, nrow=4, ncol=5) 
+x <- 1:4
+y <- 5:8
+z <- matrix(1:20, nrow=4, ncol=5)
 
-m1 <- cbind(x,y)                  
-m1                                
-m2 <- rbind(x,y)                  
-m2                                
-m3 <- rbind(m2,x)                 
-m3                                
-m4 <- cbind(z,x)                  
-m4                                
+m1 <- cbind(x,y)
+m1
+m2 <- rbind(x,y)
+m2
+m3 <- rbind(m2,x)
+m3
+m4 <- cbind(z,x)
+m4
 
 ##### 03-4
 
-z <- matrix(1:20, nrow=4, ncol=5)   
-z                                   
-z[2, 3]                              
-z[1, 4]                              
-z[2,]                               
-z[,4]                               
+z <- matrix(1:20, nrow=4, ncol=5)
+z
+z[2, 3]
+z[1, 4]
+z[2,]
+z[,4]
 
 ##### 03-5
 
-z <- matrix(1:20, nrow=4, ncol=5) 
-z                                 
-z[2, 1:3]                          
-z[1, c(1,2,4)]                     
-z[1:2,]                           
-z[,c(1,4)]                        
+z <- matrix(1:20, nrow=4, ncol=5)
+z
+z[2, 1:3]
+z[1, c(1,2,4)]
+z[1:2,]
+z[,c(1,4)]
 
 ##### 03-6
 
@@ -56,57 +56,57 @@ score
 
 ##### 03-7
 
-score['John', 'Math']              
-score['Tom', c('Math','Science')]  
-score['Mark',]                    
-score[,'English']                 
-rownames(score)                   
-colnames(score)                   
-colnames(score)[2]                
+score['John', 'Math']
+score['Tom', c('Math','Science')]
+score['Mark',]
+score[,'English']
+rownames(score)
+colnames(score)
+colnames(score)[2]
 
 ##### 03-8
 
-city <- c("Seoul", "Tokyo", "Washington") 
-rank <- c(1, 3, 2)                        
-city.info <- data.frame(city, rank)     
-city.info                               
+city <- c("Seoul", "Tokyo", "Washington")
+rank <- c(1, 3, 2)
+city.info <- data.frame(city, rank)
+city.info
 
 ##### 03-9
 
-iris[,c(1:2)]                       
-iris[,c(1,3,5)]                     
-iris[,c("Sepal.Length","Species")]  
-iris[1:5,]                          
-iris[1:5,c(1,3)]                    
+iris[,c(1:2)]
+iris[,c(1,3,5)]
+iris[,c("Sepal.Length","Species")]
+iris[1:5,]
+iris[1:5,c(1,3)]
 
 ##### 03-10
 
-dim(iris)       
-nrow(iris)      
-ncol(iris)      
-colnames(iris)  
-head(iris)      
-tail(iris)      
+dim(iris)
+nrow(iris)
+ncol(iris)
+colnames(iris)
+head(iris)
+tail(iris)
 
 ##### 03-11
 
-str(iris)               
-iris[,5]                
-unique(iris[,5])        
-table(iris[,"Species"]) 
+str(iris)
+iris[,5]
+unique(iris[,5])
+table(iris[,"Species"])
 
 ##### 03-12
 
-colSums(iris[,-5])  
-colMeans(iris[,-5]) 
-rowSums(iris[,-5])  
-rowMeans(iris[,-5]) 
+colSums(iris[,-5])
+colMeans(iris[,-5])
+rowSums(iris[,-5])
+rowMeans(iris[,-5])
 
 ##### 03-13
 
 z <- matrix(1:20, nrow=4, ncol=5)
 z
-t(z)                          
+t(z)
 
 ##### 03-14
 
@@ -115,7 +115,7 @@ IR.1
 
 IR.2 <- subset(iris, Sepal.Length>5.0 & Sepal.Width>4.0)
 IR.2
-IR.2[, c(2,4)]                  
+IR.2[, c(2,4)]
 
 ##### 03-15
 
@@ -124,7 +124,7 @@ a
 b <- matrix(21:40, 4, 5)
 b
 
-2 * a 
+2 * a
 b - 5
 2*a + 3*b
 
@@ -140,10 +140,10 @@ b <- b - 5
 
 ##### 03-16
 
-class(iris)               
-class(state.x77)          
-is.matrix(iris)           
-is.data.frame(iris)       
+class(iris)
+class(state.x77)
+is.matrix(iris)
+is.data.frame(iris)
 is.matrix(state.x77)
 
 is.data.frame(state.x77)
@@ -161,21 +161,21 @@ class(iris.m)
 
 ##### 03-18
 
-iris[,"Species"]    
-iris[,5]            
-iris["Species"]     
-iris[5]             
-iris$Species        
+iris[,"Species"]
+iris[,5]
+iris["Species"]
+iris[5]
+iris$Species
 
 ##### 03-19
 
-getwd()                            
+getwd()
 setwd(".")
-air <- read.csv("./datasets/airquality.csv", header = T)   
+air <- read.csv("./datasets/airquality.csv", header = T)
 head(air)
 
 ##### 03-20
 
-my.iris <- subset(iris, Species='Setosa')       
-write.csv(my.iris, "my_iris.csv", row.names = F)  
+my.iris <- subset(iris, Species='Setosa')
+write.csv(my.iris, "my_iris.csv", row.names = F)
 

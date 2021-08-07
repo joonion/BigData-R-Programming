@@ -5,10 +5,10 @@ job.type <- 'A'
 
 if(job.type == 'B') {
 
-  bonus <- 200          
+  bonus <- 200
 } else {
 
-  bonus <- 100          
+  bonus <- 100
 }
 
 print(bonus)
@@ -21,7 +21,7 @@ bonus <- 100
 
 if(job.type == 'A') {
 
-  bonus <- 200            
+  bonus <- 200
 }
 
 print(bonus)
@@ -34,23 +34,23 @@ score <- 85
 
 if (score > 90) {
 
-  grade <- 'A' 
+  grade <- 'A'
 
 } else if (score > 80) {
 
-  grade <- 'B' 
+  grade <- 'B'
 
 } else if (score > 70) {
 
-  grade <- 'C' 
+  grade <- 'C'
 
 } else if (score > 60) {
 
-  grade <- 'D' 
+  grade <- 'D'
 
 } else {
 
-  grade <- 'F' 
+  grade <- 'F'
 
 }
 
@@ -64,12 +64,12 @@ a <- 10
 
 b <- 20
 
-if(a>5 & b>5) {         
+if(a>5 & b>5) {
   print (a+b)
 
 }
 
-if(a>5 | b>30) {        
+if(a>5 | b>30) {
   print (a*b)
 
 }
@@ -126,7 +126,7 @@ for(i in 6:10) {
 
 for(i in 1:9) {
 
-  cat('2 *', i,'=', 2*i,'\n') 
+  cat('2 *', i,'=', 2*i,'\n')
 
 }
 
@@ -134,7 +134,7 @@ for(i in 1:9) {
 
 for(i in 1:20) {
 
-  if(i%%2==0) {     
+  if(i%%2==0) {
     print(i)
 
   }
@@ -147,18 +147,18 @@ sum <- 0
 
 for(i in 1:100) {
 
-  sum <- sum + i    
+  sum <- sum + i
 }
 
 print(sum)
 
 ##### 04-11
 
-norow <- nrow(iris)                               
-mylabel <- c( )                                   
+norow <- nrow(iris)
+mylabel <- c( )
 for(i in 1:norow) {
 
-  if (iris$Petal.Length[i] <= 1.6) {              
+  if (iris$Petal.Length[i] <= 1.6) {
     mylabel[i] <- 'L'
 
   } else if (iris$Petal.Length[i] >= 5.1) {
@@ -173,9 +173,9 @@ for(i in 1:norow) {
 
 }
 
-print(mylabel)                                    
-newds <- data.frame(iris$Petal.Length, mylabel)   
-head(newds)                                       
+print(mylabel)
+newds <- data.frame(iris$Petal.Length, mylabel)
+head(newds)
 
 ##### 04-12
 
@@ -185,8 +185,8 @@ i <- 1
 
 while(i <=100) {
 
-  sum <- sum + i      
-  i <- i + 1          
+  sum <- sum + i
+  i <- i + 1
 }
 
 print(sum)
@@ -221,8 +221,8 @@ sum
 
 ##### 04-15
 
-apply(iris[,1:4], 1, mean)  
-apply(iris[,1:4], 2, mean)  
+apply(iris[,1:4], 1, mean)
+apply(iris[,1:4], 2, mean)
 
 ##### 04-16
 
@@ -236,9 +236,9 @@ mymax <- function(x,y) {
 
   }
 
-  return(num.max) 
+  return(num.max)
 
-} 
+}
 
 ##### 04-17
 
@@ -256,15 +256,15 @@ mydiv <- function(x,y=2) {
 
   result <- x/y
 
-  return(result) 
+  return(result)
 
 }
 
 
 
-mydiv(x=10,y=3)               
-mydiv(10,3)                   
-mydiv(10)                     
+mydiv(x=10,y=3)
+mydiv(10,3)
+mydiv(10)
 
 ##### 04-19
 
@@ -272,9 +272,9 @@ myfunc <- function(x,y) {
 
   val.sum <- x+y
 
-  val.mul <- x*y 
+  val.mul <- x*y
 
-  return(list(sum=val.sum, mul=val.mul)) 
+  return(list(sum=val.sum, mul=val.mul))
 
 }
 
@@ -282,55 +282,55 @@ myfunc <- function(x,y) {
 
 result <- myfunc(5,8)
 
-s <- result$sum         
-m <- result$mul         
+s <- result$sum
+m <- result$mul
 cat('5+8=', s, '\n')
 
 cat('5*8=', m, '\n')
 
 ##### 04-20
 
-setwd("d:/source")    
-source("myfunc.R")    
+setwd("d:/source")
+source("myfunc.R")
 
 
 
-a <- mydiv(20,4)      
-b <- mydiv(30,4)      
+a <- mydiv(20,4)
+b <- mydiv(30,4)
 a+b
 
-mydiv(mydiv(20,2),5)  
+mydiv(mydiv(20,2),5)
 
 ##### 04-21
 
 score <- c(76, 84, 69, 50, 95, 60, 82, 71, 88, 84)
 
-which(score==69)            
-which(score>=85)            
-max(score)                  
-which.max(score)            
-min(score)                  
-which.max(score)            
+which(score==69)
+which(score>=85)
+max(score)
+which.max(score)
+min(score)
+which.max(score)
 
 ##### 04-22
 
 score <- c(76, 84, 69, 50, 95, 60, 82, 71, 88, 84)
 
-idx <- which(score<=60)           
-score[idx] <- 61                  
-score                             
+idx <- which(score<=60)
+score[idx] <- 61
+score
 
 
-idx <- which(score>=80)           
-score.high <- score[idx]          
-score.high                        
+idx <- which(score>=80)
+score.high <- score[idx]
+score.high
 
 ##### 04-23
 
-idx <- which(iris$Petal.Length>5.0) 
+idx <- which(iris$Petal.Length>5.0)
 idx
 
-iris.big <- iris[idx,]              
+iris.big <- iris[idx,]
 iris.big
 
 ##### 04-24
