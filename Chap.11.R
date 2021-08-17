@@ -37,7 +37,7 @@ pred
 
 compare <- data.frame(pred, cars[,2], pred-cars[,2])
 
-colnames(compare) <- c('1','2','3')
+colnames(compare) <- c('예상','실제','오차')
 head(compare)
 
 ##### 11-4
