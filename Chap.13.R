@@ -43,7 +43,7 @@ sum(is.na(ds.total))
 
 ds.201712 <- subset(ds.total, ds.total$수집연월 == 5)
 dim(ds.201712)
-
+ds.201712
 store.level_1 <- aggregate(ds.201712[,1],
                            by=list(대분류=ds.201712$상권업종대분류명),
                            FUN=length)
