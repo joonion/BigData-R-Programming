@@ -41,7 +41,7 @@ str(full)
 
 # Write intermediate result
 
-write.csv(full, './titanic.merged.csv', row.names = F)
+write.csv(full, './datasets/titanic.merged.csv', row.names = F)
 
 # Are there missing values?
 
@@ -177,12 +177,12 @@ full$NumFamily <- full$SibSp + full$Parch
 
 processed <- full[c(1, 2, 3, 5, 6, 10, 12, 13, 14, 15)]
 # Write preprocessed result
-write.csv(processed, 'full.processed.csv', row.names = F)
+write.csv(processed, './datasets/full.processed.csv', row.names = F)
 
 # EDA: Expoling the Data
 
 # Load preprocessed data
-processed <- read.csv('full.processed.csv')
+processed <- read.csv('./datasets/full.processed.csv')
 processed
 head(processed)
 train <- processed[!is.na(processed$Survived), ]
@@ -279,7 +279,7 @@ barplot(df1$rate, xlab = 'Fare', ylab = 'survival rate')
 # Feature Engineering
 
 # Load preprocessed data
-processed <- read.csv('full.processed.csv')
+processed <- read.csv('./datasets/full.processed.csv')
 processed
 head(processed)
 train <- processed[!is.na(processed$Survived), ]
@@ -310,18 +310,22 @@ conf_matrix
 
 # 정확도
 accuracy <- (TP + TN) / (TP + FP + TN + FN)
+./datasets/
+    
 # 정밀도
 precision <- TP / (TP + FP)
+precision
+
 # 민감도(재현율)
 recall <- TP / (TP + FN)
 sensitivity <- recall
+recall
+
 # 특정율
 specificity <- TN / (TN + FP)
+specificity
+
 # F1 점수
 F1_score <- 2 * precision * recall / (precision + recall)
-
-accuracy
-precision
-recall
 F1_score
 
