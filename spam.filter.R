@@ -3,13 +3,13 @@
 ## Example: Filtering spam SMS messages ----
 ## Step 2: Exploring and preparing the data ---- 
 
-setwd("D:/BigDataR/")
 getwd()
 # read the sms data into the sms data frame
-sms_raw <- read.csv("sms_spam.csv", stringsAsFactors = FALSE)
+sms_raw <- read.csv("./datasets/sms_spam.csv", encoding = "UTF-8")
 
 # examine the structure of the sms data
 str(sms_raw)
+head(sms_raw)
 
 # convert spam/ham to factor.
 sms_raw$type <- factor(sms_raw$type)

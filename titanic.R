@@ -133,9 +133,9 @@ par(mfrow = c(1, 1))
 
 # Handling Missing Values 3: Embarked
 
-full[Embarked == '', ]
+full[full$Embarked == '', ]
 table(full$Embarked)
-full[Embarked == '', ]$Embarked <- 'S'
+full[full$Embarked == '', ]$Embarked <- 'S'
 table(full$Embarked)
 
 # Handling missing values 4: Cabin
@@ -300,9 +300,9 @@ table(train$Survived)
 table(pred)
 
 TP <- sum(train$Survived == 1 & pred == 1)
-TN <- sum(train$Survived == 1 & pred == 0)
+TN <- sum(train$Survived == 0 & pred == 0)
 FP <- sum(train$Survived == 0 & pred == 1)
-FN <- sum(train$Survived == 0 & pred == 0)
+FN <- sum(train$Survived == 1 & pred == 0)
 conf_matrix <- data.frame(c(TN, FN), c(FP, TP), 
                           row.names = c('Truth.F', 'Truth.T'))
 names(conf_matrix) <- c('Predict.N', 'Predict.P')
@@ -324,3 +324,4 @@ accuracy
 precision
 recall
 F1_score
+
